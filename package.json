@@ -9,7 +9,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "pre-build": "grunt clean",
-    "build": "grunt build",
+    "build": "node init && grunt build",
     "wbpack-build": "npm run pre-build && webpack && npm run less && lerna run build && npm run post-build",
     "post-build": "grunt uidocs-generator copy:site copy:font_dist copy:less_customizer copy:less_dist copy:packages_dist copy:packages_publish",
     "less": "npm run less-main && npm run less-min",
@@ -27,7 +27,7 @@
     "postinstall": "bower install",
     "pre-release": "grunt release",
     "release": "lerna publish from-package",
-    "start": "grunt dev --fast",
+    "start": "node init && grunt dev --fast",
     "test": "grunt test",
     "webdriver-manager": "webdriver-manager"
   },
