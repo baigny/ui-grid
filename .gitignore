@@ -205,3 +205,4 @@ docs
 bower_components
 .grunt
 coverage/
+config.bat
